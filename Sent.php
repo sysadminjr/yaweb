@@ -17,8 +17,8 @@ try {
   $mail->isSMTP();
   $mail->Host = 'smtp.office365.com';  // Cambia esto por tu servidor SMTP
   $mail->SMTPAuth = true;
-  $mail->Username ='yaweb@outlook.es';  // Cambia esto por tu dirección de correo electrónico
-  $mail->Password ='Kaed2413@';  // Cambia esto por tu contraseña
+  $mail->Username ='';  // Cambia esto por tu dirección de correo electrónico
+  $mail->Password ='';  // Cambia esto por tu contraseña
   $mail->SMTPSecure = 'tls';
   $mail->Port =587;  // Puerto SMTP, ajusta según sea necesario
 
