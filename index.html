@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#0097B2">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="sweetalert2.all.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	 <link rel="icon" type="image/x-icon" href="img/Yaweb.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="icon" type="text/css" href="img/icon.png">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<title>YAWEB</title>
+</head>
+<body>
+	<header>
+		<a href="index.html"><img src="img/Yaweb.gif"></a>
+		<input type="checkbox" id="check">
+		<label for="check" class="mostrarMenu">
+		&#8801</label>
+		<nav class="menu">
+			<a href="#">Inicio</a>
+			<a href="#quienes-somos">Nosotros</a>
+			<a href="#servicios">Servicios</a>
+		<label for="check" class="esconderMenu"> 
+			&#215
+		</label>
+		
+	</nav>
+	</header>
+
+	<section id="banner">
+		<div class="contenido-banner">
+			<img src="img/banner.png">
+		</div>
+
+	</section>
+
+	<section id="quienes-somos">
+		<div class="somos-left">
+			<h1> ¿Quiénes somos?</h1>
+			<ul>
+				<li>Yaweb es una empresa líder en el desarrollo web, especializada en la creación y venta de páginas web a medida.</li>
+				<li>Nuestro equipo de expertos en diseño y desarrollo trabaja de la mano de nuestros clientes para brindar soluciones web personalizadas y de calidad.</li>
+				<li>Llevamos más de 10 años en el mercado, con una amplia experiencia en proyectos exitosos para empresas de diversos sectores.</li>
+			</ul>
+		</div>
+		<div class="somos-rigth">
+		<img src="img/Yaweb.gif">
+		</div>
+	</section>
+	<section id="servicios">
+		<h1>Nuestros servicios</h1>
+		<ul>
+			<li>Diseño web personalizado: Creamos páginas web únicas y atractivas que reflejen la identidad y objetivos de tu empresa.</li>
+			<li>Desarrollo web avanzado: Utilizamos las últimas tecnologías y mejores prácticas para crear sitios web funcionales y de alto rendimiento.</li>
+			<li>Comercio electrónico: Ofrecemos soluciones de comercio electrónico completas, desde tiendas en línea hasta pasarelas de pago seguras.</li>
+			<li>Optimización para motores de búsqueda (SEO): Implementamos estrategias SEO para mejorar la visibilidad y el posicionamiento de tu sitio web en los motores de búsqueda.</li>
+			<li>Diseño responsivo: Adaptamos tus páginas web a diferentes dispositivos, garantizando una experiencia de usuario óptima en computadoras de escritorio, tabletas y teléfonos móviles.</li>
+		</ul>
+	</section>
+	<section id="form">
+		<h1>Informacion de contacto</h1>
+		<form  id="sent" action="Sent.php" method="post" enctype="multipart/form-data">
+			<div class="inputs">
+			<input class="input" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+			<input class="input" type="text" name="correo" placeholder="Correo electrónico" required>
+			<input class="input" type="text" name="numero" placeholder="numero" required>
+			<input class="file"type="file" name="imagen">
+		</div>
+		<div class="formBtn">
+			<button id="myButton" class="boton-saber-mas" type="submit">Enviar</button>
+		</div>
+		</form>
+	</div>
+	</section>
+	<section id="footer">
+		<div class="contenido-iconos">
+			<div> 
+			<i class="material-icons">drive_eta</i>
+			<h6>Envios</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+			<div>
+			<i class="material-icons">whatshot</i>
+			<h6>Ofertas</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+
+			<div id="icono-responsive">
+			<i class="Large material-icons">devices</i>
+			<h6>Responsive</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+	</section>
+	
+	<script type="text/javascript">
+	function enviar() {
+    var form = document.getElementById('sent');
+    var formData = new FormData(form);
+    
+    $.ajax({
+        url: "./Sent.php",
+        data: formData,
+        type: "POST",
+        contentType: false,
+        processData: false,
+        success: function(results) {
+            console.log(results);
+            if (results) {
+                Swal.fire({
+                    title: 'informacion',
+                    text: 'su informacion se envio correctamente',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'no se enviaron los datos',
+                    text: 'Vuelva a intentar',
+                });
+            }
+        }
+    });
+}
+
+$('#sent').submit(function(event) {
+    event.preventDefault();
+    enviar();
+});
+
+
+	</script>
+	<script>
+		window.addEventListener('popstate', function(event) {
+	console.log("holaza");
+});
+	</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,438 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva , Tahoma, sans-serif;
+}
+header{
+	height: 100px;
+	padding: 0 50px;
+	color: #0097B2;
+	display: flex;
+	background: black;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header img
+{
+	height: 15vh;
+	width: 15vh;
+}
+
+.menu a {
+	background: black;
+	color: #0097B2;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+}
+
+.mostrarMenu,.esconderMenu{
+	background: black;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+	transition: 0.5s;
+}
+
+.mostrarMenu{
+	background: black;
+	order: 1;
+}
+
+.menu a:hover,
+.mostrarMenu:hover,
+.esconderMenu:hover{
+	color: whitesmoke;
+}
+#check{
+	display: none;
+}
+
+#banner{
+	padding: 50px;
+	background: black;
+	height: 60vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#banner img{
+	align-self: center;
+	width: 60%;
+	padding: 30px;
+
+
+}
+.contenido-banner{
+	position: relative;
+	color: white;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.contenido-banner h3{
+	font-size: 30px;
+	font-weight: 400;
+	padding: 10px 0px;
+
+}
+.contenido-banner h3 span {
+	font-weight: 600;
+
+}
+
+.boton-empezar{
+	text-decoration: none;
+	color: white;
+	border: 1px solid #0097B2;
+	padding: 20px 40px;
+	align-self: center ;
+	transition: all 0.4s;
+	margin-top: 60vh;
+	border-radius:20px ;
+}
+
+.boton-empezar:hover{
+	background: #0097B2;
+}
+
+
+
+.boton-saber-mas{
+	display: inline-block;
+	text-decoration: none;
+	color: #0097B2;
+	padding: 10px 40px;
+	border: 3px solid #0097B2;
+	border-radius: 15px;
+	margin-top: 15px;
+	transition: all 0.5s;
+	}
+.boton-saber-mas:hover{
+	background:black ;
+	color: #0097B2;
+}
+
+#footer{
+	padding: 0px 50px;
+	background: black;
+	padding-bottom: 10vh;
+}
+.contenido-iconos{
+	padding: 50px 50px 0px 50px;
+	display:flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.contenido-iconos div{
+	flex: 1;
+	margin:20px 0px;
+	border-right: 2px solid rgba(255, 255,255, 0.2);
+}
+#icono-responsive{
+	border: none;
+}
+.contenido-iconos div i {
+	color: #0097B2;
+}
+.contenido-iconos div h6{
+color: #0097B2;
+font-size: 20px;
+font-weight: 100;
+margin: 10px 0px;
+}
+.contenido-iconos div p{
+	color: #0097B2;
+	font-size: 15px;
+}
+.boton-iconos{
+	text-align: center;
+	padding-bottom: 50px;
+}
+/* somos */
+#quienes-somos{
+	width: 100%;
+	height: 60vh;
+	background: black;
+	display: flex;
+
+}
+.somos-left{
+	align-self: center;
+	height: 100%;
+	width: 50%;
+	background:#0097B2;
+
+}
+.somos-left h1{
+	text-decoration: none;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.somos-left ul li{
+	text-decoration: none;
+	text-align: left;
+	height: 20%;
+	width: 80%;
+	margin: 20px auto;
+}
+
+.somos-rigth{
+	align-self: center;
+	height: 100%;
+	width: 50%;
+	
+
+}
+
+.somos-rigth  img{
+	align-self: center;
+	width: 50%;
+	height: 80%;
+	margin: 10px auto;
+	padding: 20px;
+
+
+}
+/* Servicios */
+
+#servicios{
+	height: 60vh;
+	width: 100%;
+	background: black;
+	color:#0097B2;
+}
+#servicios h1{
+	text-decoration: none;
+	text-align: center;
+	padding: 20px;
+}
+
+#servicios ul li{
+	text-decoration: none;
+	text-align: left;
+	height: 20%;
+	width: 80%;
+	margin: 20px auto;
+}
+
+
+/* Formulario */
+#form{
+	width: 100%;
+	height: 70vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	color: black;
+	background:#0097B2;
+	flex-direction: column;
+}
+#form h1{
+	margin: 20px; 
+	height: 8vh;
+	width: 60vh;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+
+
+
+.inputs{
+	display: flex;
+	flex-direction: column;
+	height: 60%;
+	width: 60vh;
+	align-self: center;
+	align-items: center;
+}
+.form a{
+	color: #0097B2;
+}
+
+ .input{
+	width: 60%;
+	height: 70%;
+	margin-bottom: 8px;
+	color: #0097B2;
+	border: 2px solid #0097B2;
+	border-radius: 10px;
+	text-align: center;
+}
+.file{
+	text-align: left;
+	width: 35%;
+	height: 25vh;
+	outline: none;
+
+}
+.formBtn{
+	display: flex;
+	width: 22vh;
+	margin: 10px auto;
+
+}
+#form p{
+	margin: 20px auto;
+	height: 8vh;
+	width: 100%;
+	text-align: center;
+}
+
+
+
+@media(max-width: 768px){
+
+header img {
+	height: 10vh;
+	width: 10vh;
+}
+.mostrarMenu{
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 5px;
+	font-size: 40px;
+
+}
+.esconderMenu{
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 5px;
+	font-size: 40px;
+}
+
+.menu{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	right: -100%;
+	top: 0;
+	text-align: center;
+	padding: 100px 0px;
+	z-index: 100;
+	transition: 0.8s;
+}
+.menu a{
+	display: block;
+	padding: 20px;
+}
+
+.esconderMenu{
+	position: absolute;
+	top: 40px;
+	right: 40px;
+}
+#check:checked ~ .menu{
+	right: 0;
+}
+#banner{
+	height: 25vh;
+	background: black;
+
+}
+#banner img{
+	height: 30vh;
+	width: 40vh;
+}
+
+.boton-empezar{
+	text-decoration: none;
+	color: white;
+	border: 1px solid #0097B2;
+	padding: 20px 40px;
+	align-self: baseline ;
+	transition: all 0.4s;
+	margin-top: 0px;
+
+}
+#personas{
+	flex-direction: column;
+}
+.contenido-iconos{
+	flex-direction: column;
+}
+.contenido-iconos div{
+	border-right:none ;
+	border-bottom: 2px solid rgba(255, 255,255, 0.2);
+}
+
+.form{
+	width: 40vh;
+}
+.inputs{
+	width:40vh;
+}
+
+#quienes-somos{
+	width: 100%;
+	height: 90vh;
+	background: black;
+	display: flex;
+	flex-direction: column;
+
+}
+.somos-left{
+	align-self: center;
+	height: 70%;
+	width: 90%;
+	background:#0097B2;
+	border-radius: 20px;
+
+}
+.somos-left h1{
+	text-decoration: none;
+	text-align: center;
+	margin: 10px auto;
+
+	
+}
+.somos-left ul li{
+	text-decoration: none;
+	text-align: left;
+	height: 20%;
+	width: 80%;
+	margin: 20px auto;
+}
+
+.somos-rigth{
+	height: 50%;
+	width: 100%;
+	display: flex;
+	
+}
+.somos-rigth img{
+	align-self: center;
+	width: 55%;
+	height: 75%;
+	margin: 10px auto;
+	padding: 10px;
+
+}
+#servicios{
+	height: 75vh;
+	width: 100%;
+	background: black;
+	color:#0097B2;
+}
+#form h1{
+	margin-bottom: 20px; 
+	height: 8vh;
+	width: 60%;
+	text-align: center;
+	font-size: 20px;
+	text-decoration: none;
+}
+}
+
